@@ -7,7 +7,7 @@ description = "A minimal Wayland compositor similar to gamescope, with broad GPU
 license = "MIT"
 
 [dependencies]
-smithay = { git = "https://github.com/Smithay/smithay", features = ["backend_udev", "backend_drm", "backend_session_libseat", "renderer_gles", "renderer_multi", "xwayland", "backend_vulkan"] }
+smithay = { git = "https://github.com/Smithay/smithay", features = ["backend_udev", "backend_drm", "backend_session_libseat", "renderer_gles", "renderer_multi", "xwayland"] }
 calloop = "0.12"
 slog = "2.7"
 slog-stdlog = "4.1"
@@ -26,7 +26,7 @@ udev = "0.9"
 drm = "0.12"
 egl = "0.16"
 gles2 = "0.2"
-ash = "0.38"  # For Vulkan
+ash = { version = "0.38", optional = true }  # Made optional to fix feature error
 serde = { version = "1.0", features = ["derive"] }
 toml = "0.8"
 anyhow = "1.0"
