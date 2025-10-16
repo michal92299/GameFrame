@@ -1,1 +1,27 @@
+[package]
+name = "gameframe"
+version = "0.1.0"
+edition = "2021"
 
+[dependencies]
+smithay = { git = "https://github.com/Smithay/smithay", features = ["backend_udev", "backend_drm", "renderer_gles", "xwayland"] }
+calloop = "0.12"
+slog = "2.7"
+slog-stdlog = "4.1"
+clap = { version = "4.5", features = ["derive"] }
+xkbcommon = "0.7"
+wayland-server = "0.31"
+bitflags = "2.4"
+nix = "0.29"
+thiserror = "1.0"
+libc = "0.2"
+memmap2 = "0.9"
+drm-fourcc = "2.2"
+gbm = "0.15"
+input = "0.9"
+udev = "0.9"
+seat = "0.1"
+
+[features]
+opengl = []
+vulkan = ["smithay/renderer_vulkan"]
